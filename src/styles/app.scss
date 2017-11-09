@@ -1,0 +1,86 @@
+$font-stack : Helvetica,
+sans-serif;
+$primary-color: rgb(186, 186, 230);
+$sand-color: #c5c368;
+$water-color-one: #55a1c5;
+$water-color-two: #2b8fbf;
+$sun-color: yellow;
+
+
+body {
+    font: 100% $font-stack;
+    color: $primary-color;
+    background: linear-gradient(45deg, red, rgb(0, 0, 254));
+
+}
+.sand {
+    background-color: $sand-color;
+    width: 120%;
+    height: 330px;
+    position: fixed;
+    bottom: -73px;
+    margin: 0;
+    left: -148px;
+    border-radius: 70%;
+}
+.water-one {
+    width: 599px;
+        height: 300px;
+        background-color: $water-color-one;
+        position: fixed;
+        bottom: 82px;
+        left: -82px;
+        border-radius: 100%;
+}
+.water-two {
+   width: 599px;
+   height: 300px;
+   background-color: $water-color-two;
+   position: fixed;
+   bottom: 55px;
+   left: 161px;
+   border-radius: 100%;
+
+}
+.water-three {
+    width: 599px;
+    height: 200px;
+    background-color: $water-color-one;
+    bottom: 179px;
+    position: fixed;
+    left: 400px;
+    z-index: -1;
+    border-radius: 100%;
+}
+.water-four {
+   width: 599px;
+   height: 220px;
+   background-color: $water-color-two;
+   position: fixed;
+   bottom: 102px;
+   left: 657px;
+   border-radius: 100%;
+
+}
+.water-five {
+    width: 599px;
+    height: 220px;
+    background-color: $water-color-one;
+    position: fixed;
+    bottom: 123px;
+    left: 893px;
+    z-index: -1;
+    border-radius: 100%;
+
+}
+.sun {
+    height: 200px;
+    width: 200px;
+    background-color: $sun-color;
+        position: fixed;
+        top: 163px;
+        left: 138px;
+
+        border-radius: 50%;
+    border-radius: 50%;
+}
