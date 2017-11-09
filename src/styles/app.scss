@@ -1,17 +1,49 @@
 $font-stack : Helvetica,
 sans-serif;
 $primary-color: rgb(186, 186, 230);
-$sand-color: #c5c368;
-$water-color-one: #55a1c5;
+$sand-color: #8c8478;
+$water-color-one: #6aaece;
 $water-color-two: #2b8fbf;
-$sun-color: yellow;
+$sun-color: #e8bfbf;
+
+@keyframes water {
+    0% {
+        transform: rotate(3deg)
+    }
+    25% {
+        transform: rotate(4deg)
+    }
+    50% {
+        transform: rotate(6deg)
+    }
+    75% {
+        transform: rotate(4deg)
+    }
+    100% {
+        transform: rotate(3deg)
+    }
+}
+@keyframes sun {
+    0% {
+        transform: translate3d(-70px, -70px, 0px);
+        animation-timing-function: ease-in;
+    }
+    50% {
+        transform: translate3d(130px, 130px, 0px);
+        animation-timing-function: ease-out;
+    }
+    100% {
+        transform: translate3d(300px, 300px, 0px);
+    }
+}
+
+
 
 
 body {
     font: 100% $font-stack;
     color: $primary-color;
-    background: linear-gradient(45deg, red, rgb(0, 0, 254));
-
+    background: linear-gradient(45deg, #181a1f, #775AB2);
 }
 .sand {
     background-color: $sand-color;
@@ -22,15 +54,22 @@ body {
     margin: 0;
     left: -148px;
     border-radius: 70%;
+    z-index: 1;
+}
+.water-container {
+    width: 100%;
 }
 .water-one {
     width: 599px;
-        height: 300px;
-        background-color: $water-color-one;
-        position: fixed;
-        bottom: 82px;
-        left: -82px;
-        border-radius: 100%;
+    height: 300px;
+    background-color: $water-color-one;
+    position: fixed;
+    bottom: 82px;
+    left: -82px;
+    border-radius: 100%;
+    animation: water;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
 }
 .water-two {
    width: 599px;
@@ -40,6 +79,10 @@ body {
    bottom: 55px;
    left: 161px;
    border-radius: 100%;
+   z-index: -1;
+   animation: water;
+   animation-duration: 6s;
+   animation-iteration-count: infinite;
 
 }
 .water-three {
@@ -49,38 +92,85 @@ body {
     bottom: 179px;
     position: fixed;
     left: 400px;
-    z-index: -1;
+    z-index: -2;
     border-radius: 100%;
+    animation: water;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+
 }
 .water-four {
    width: 599px;
    height: 220px;
-   background-color: $water-color-two;
+   background-color: #44a2d0;
    position: fixed;
-   bottom: 102px;
-   left: 657px;
+   bottom: 122px;
+   right: 232px;
    border-radius: 100%;
+   animation: water;
+   animation-duration: 6s;
+   animation-iteration-count: infinite;
 
 }
 .water-five {
     width: 599px;
-    height: 220px;
+    height: 245px;
     background-color: $water-color-one;
     position: fixed;
-    bottom: 123px;
-    left: 893px;
-    z-index: -1;
+    bottom: 132px;
+    right: -94px;
+    z-index: 0;
     border-radius: 100%;
+    animation: water;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+
+}
+.water-six {
+    width: 599px;
+    height: 220px;
+    background-color: #279dd6;
+    position: fixed;
+    bottom: 102px;
+    left: -34px;
+    border-radius: 100%;
+    animation: water;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+
+}
+.water-seven {
+    width: 599px;
+    height: 220px;
+    background-color: #279dd6;
+    position: fixed;
+    bottom: 107px;
+    right: -20px;
+    z-index: 0;
+    border-radius: 100%;
+    animation: water;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
 
 }
 .sun {
     height: 200px;
     width: 200px;
     background-color: $sun-color;
-        position: fixed;
-        top: 163px;
-        left: 138px;
-
-        border-radius: 50%;
+    position: fixed;
+    bottom: 42%;
+    left: 138px;
+    z-index: -2;
     border-radius: 50%;
+    animation: sun;
+    animation-iteration-count: infinite;
+    transition: transform .1s ease-in-out;
+    animation-duration: 25s;
+
+    // animation-timing-function: ease-in;
+
+
+
+
+
 }
