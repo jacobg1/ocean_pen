@@ -1,0 +1,23 @@
+{
+  "name": "ocean_pen",
+  "version": "1.0.0",
+  "description": "codevember",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacobg1/ocean_pen.git"
+  },
+  "keywords": [
+    "ocean",
+    "codepen"
+  ],
+  "author": "jacob greenwald",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jacobg1/ocean_pen/issues"
+  },
+  "homepage": "https://github.com/jacobg1/ocean_pen#readme"
+}
